@@ -5,4 +5,4 @@ import { Demo } from './Demo';
 
 storiesOf('Example', module)
     .add('Demo', () => <Demo />)
-    .add('Demo2', () => <Demo />);
+    .add('Demo2 yaya', () => <Demo />);

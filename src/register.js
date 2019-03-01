@@ -23,12 +23,17 @@ class Panel extends React.Component<Props> {
         });
     }
 
+    format(value: string): string {
+        return value.replace(' ', '-');
+    }
+
     render(): React.Element {
         const { kind, story } = this.state;
         return (
             <div>
                 <b>Kind:</b>{kind} <b>story:</b>{story}
-                <img src={require('../src/__image_snapshots__/storyshots-test-js-image-storyshots-button-with-text-1-snap.png')} />
+                {/* <img src={require('../example/__image_snapshots__/storyshots-test-js-image-storyshots-button-with-text-1-snap.png') + '?' + Math.random()} /> */}
+                <img src={`http://127.0.0.1:3003/diff/${this.format(kind)}/${this.format(story)}`} />
             </div>
         );
     }
